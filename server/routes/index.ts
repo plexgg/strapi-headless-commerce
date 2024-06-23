@@ -1,3 +1,8 @@
+import attribute from './attribute'
+import channel from './channel'
+import customer from './customer'
+import productType from './productType'
+
 export default [
   {
     method: 'GET',
@@ -7,4 +12,8 @@ export default [
       policies: [],
     },
   },
-];
+  ...attribute,
+  ...channel,
+  ...customer,
+  ...productType,
+]
