@@ -11,6 +11,7 @@ import {
 } from '@strapi/design-system'
 import { onRowClick, stopPropagation } from '@strapi/helper-plugin'
 import { Eye } from '@strapi/icons'
+
 import { Headers } from '..'
 
 type Rows = {

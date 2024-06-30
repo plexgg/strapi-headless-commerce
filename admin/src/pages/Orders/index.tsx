@@ -3,7 +3,6 @@
  * Orders
  *
  */
-
 import React, { useState } from 'react'
 
 import {
@@ -17,6 +16,7 @@ import {
   Typography,
 } from '@strapi/design-system'
 import { ArrowLeft, Plus } from '@strapi/icons'
+
 import { Drawer } from '../../components/Drawer'
 import { Modal } from '../../components/Modal'
 import { Table } from '../../components/Table'
@@ -31,7 +31,10 @@ const Orders = () => {
     <>
       <BaseHeaderLayout
         navigationAction={
-          <Link startIcon={<ArrowLeft />} to="/plugins/strapi-headless-commerce">
+          <Link
+            startIcon={<ArrowLeft />}
+            to="/plugins/strapi-headless-commerce"
+          >
             Go back
           </Link>
         }

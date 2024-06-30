@@ -1,4 +1,5 @@
 import { request } from '@strapi/helper-plugin'
+
 import { type Channel } from '../types/channel'
 
 const channelRequests = {
@@ -25,10 +26,13 @@ const channelRequests = {
   },
 
   updateChannel: async (id: string, data: Partial<Channel>) => {
-    const response = await request(`/strapi-headless-commerce/channel/update/${id}`, {
-      method: 'PUT',
-      body: data,
-    })
+    const response = await request(
+      `/strapi-headless-commerce/channel/update/${id}`,
+      {
+        method: 'PUT',
+        body: data,
+      },
+    )
     return response
   },
 

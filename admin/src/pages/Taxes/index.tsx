@@ -3,7 +3,6 @@
  * Taxes
  *
  */
-
 import React from 'react'
 
 import {
@@ -17,6 +16,7 @@ import {
   Stack,
 } from '@strapi/design-system'
 import { ArrowLeft, Plus } from '@strapi/icons'
+
 import pluginId from '../../pluginId'
 
 const Taxes = () => {

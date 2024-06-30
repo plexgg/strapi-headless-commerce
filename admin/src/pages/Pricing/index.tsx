@@ -3,6 +3,7 @@
  * Pricing
  *
  */
+import React from 'react'
 
 import {
   BaseHeaderLayout,
@@ -13,7 +14,7 @@ import {
   Link,
 } from '@strapi/design-system'
 import { ArrowLeft, Plus } from '@strapi/icons'
-import React from 'react'
+
 import pluginId from '../../pluginId'
 
 const Pricing = () => {

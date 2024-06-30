@@ -1,4 +1,5 @@
 import { request } from '@strapi/helper-plugin'
+
 import { type Attribute } from '../types/attribute'
 
 const attributeRequests = {
@@ -18,31 +19,43 @@ const attributeRequests = {
   },
 
   deleteAttribute: async (id: string) => {
-    const response = await request(`/strapi-headless-commerce/attribute/${id}`, {
-      method: 'DELETE',
-    })
+    const response = await request(
+      `/strapi-headless-commerce/attribute/${id}`,
+      {
+        method: 'DELETE',
+      },
+    )
     return response
   },
 
   updateAttribute: async (id: string, data: Partial<Attribute>) => {
-    const response = await request(`/strapi-headless-commerce/attribute/update/${id}`, {
-      method: 'PUT',
-      body: data,
-    })
+    const response = await request(
+      `/strapi-headless-commerce/attribute/update/${id}`,
+      {
+        method: 'PUT',
+        body: data,
+      },
+    )
     return response
   },
 
   toggleAttribute: async (id: string) => {
-    const response = await request(`/strapi-headless-commerce/attribute/${id}`, {
-      method: 'PUT',
-    })
+    const response = await request(
+      `/strapi-headless-commerce/attribute/${id}`,
+      {
+        method: 'PUT',
+      },
+    )
     return response
   },
 
   getAttribute: async (id: string) => {
-    const response = await request(`/strapi-headless-commerce/attribute/${id}`, {
-      method: 'GET',
-    })
+    const response = await request(
+      `/strapi-headless-commerce/attribute/${id}`,
+      {
+        method: 'GET',
+      },
+    )
     return response
   },
 }

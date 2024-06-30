@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DynamicTable } from '@strapi/helper-plugin'
 import React from 'react'
+
+import { DynamicTable } from '@strapi/helper-plugin'
 
 import TableRows from './TableRows'
 

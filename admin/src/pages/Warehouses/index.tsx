@@ -3,7 +3,6 @@
  * Warehouses
  *
  */
-
 import React, { useState } from 'react'
 
 import {
@@ -15,6 +14,7 @@ import {
   Link,
 } from '@strapi/design-system'
 import { ArrowLeft, Plus } from '@strapi/icons'
+
 import { Table } from '../../components/Table'
 import pluginId from '../../pluginId'
 

@@ -3,9 +3,9 @@
  * PluginIcon
  *
  */
+import React from 'react'
 
 import { Store } from '@strapi/icons'
-import React from 'react'
 
 const PluginIcon = () => <Store />
 

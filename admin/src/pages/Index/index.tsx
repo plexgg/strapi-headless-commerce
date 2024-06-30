@@ -3,9 +3,9 @@
  * Index
  *
  */
+import React from 'react'
 
 import { BaseHeaderLayout, ContentLayout } from '@strapi/design-system'
-import React from 'react'
 
 const Index = () => {
   return (

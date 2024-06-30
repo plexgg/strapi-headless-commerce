@@ -24,17 +24,21 @@ const SortableItem = SortableElement(
     }
 
     return (
-      <li>
+      <li style={{ listStyle: 'none' }}>
         <Stack spacing={4} horizontal background="secondary200" padding={3}>
           <Drag />
           <TextInput
             aria-label="name"
+            placeholder="Name"
+            autocomplete="off"
             value={values[id]?.name || ''}
             onChange={inputNameChange}
           />
 
           <TextInput
             aria-label="value"
+            placeholder="Value"
+            autocomplete="off"
             value={values[id]?.value || ''}
             onChange={inputValueChange}
           />
@@ -45,17 +49,17 @@ const SortableItem = SortableElement(
 ) as unknown as (props: SortableItemProps) => JSX.Element
 
 type SortableListProps = {
-  items: Array<number>
+  fields: Record<'id', string>[]
   values: Array<Metadata>
   onInputChange: (id: number, name: string, value: string | number) => void
   onSortEnd: (payload: { oldIndex: number; newIndex: number }) => void
 }
 
 export const SortableList = SortableContainer(
-  ({ items, values, onInputChange }: SortableListProps) => {
+  ({ fields, values, onInputChange }: SortableListProps) => {
     return (
       <ul>
-        {items.map((item, index) => (
+        {fields.map((_, index) => index).map((item, index) => (
           <SortableItem
             key={`item-${index}`}
             index={index}

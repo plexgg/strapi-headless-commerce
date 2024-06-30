@@ -9,13 +9,13 @@ import * as yup from 'yup'
 import customerRequests from '../../api/customer'
 import { RHFTextArea, RHFTextField } from '../../components/HookForm'
 import RHFComboBox from '../../components/HookForm/RHFComboBox'
-import { Metadata } from '../../components/Metadata'
 import {
   Accordion,
   AccordionGroup,
   withDrawerWizard,
 } from '../../components/Wizard'
 import { Customer } from '../../types/customer'
+import RHFSortable from '../../components/HookForm/RHFSortable'
 
 // ----------------------------------------------------------------------
 
@@ -236,7 +236,11 @@ const NewCustomer = () => {
         </Grid>
       </Accordion>
 
-      <Metadata />
+      <RHFSortable
+        id="metadata"
+        title="Metadata"
+        description="Add metadata to this customer."
+      />
     </AccordionGroup>
   )
 }

@@ -5,7 +5,7 @@ import { Grid, GridItem, Typography } from '@strapi/design-system'
 import * as yup from 'yup'
 
 import { RHFSelect, RHFTextArea, RHFTextField } from '../../components/HookForm'
-import { Metadata } from '../../components/Metadata'
+import RHFSortable from '../../components/HookForm/RHFSortable'
 import {
   Accordion,
   AccordionGroup,
@@ -162,7 +162,11 @@ const NewProduct = () => {
         </Grid>
       </Accordion>
 
-      <Metadata />
+      <RHFSortable
+        id="metadata"
+        title="Metadata"
+        description="Add metadata for this attribute."
+      />
     </AccordionGroup>
   )
 }

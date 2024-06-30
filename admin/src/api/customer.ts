@@ -1,4 +1,5 @@
 import { request } from '@strapi/helper-plugin'
+
 import { type Customer } from '../types/customer'
 
 const customerRequests = {
@@ -25,10 +26,13 @@ const customerRequests = {
   },
 
   updateCustomer: async (id: string, data: Partial<Customer>) => {
-    const response = await request(`/strapi-headless-commerce/customer/update/${id}`, {
-      method: 'PUT',
-      body: data,
-    })
+    const response = await request(
+      `/strapi-headless-commerce/customer/update/${id}`,
+      {
+        method: 'PUT',
+        body: data,
+      },
+    )
     return response
   },
 

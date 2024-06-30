@@ -3,6 +3,7 @@
  * Configuration
  *
  */
+import React from 'react'
 
 import {
   BaseHeaderLayout,
@@ -16,7 +17,6 @@ import {
 } from '@strapi/design-system'
 import { ContentBox } from '@strapi/helper-plugin'
 import { ArrowLeft } from '@strapi/icons'
-import React from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -37,7 +37,10 @@ const Configuration = () => {
     <>
       <BaseHeaderLayout
         navigationAction={
-          <Link startIcon={<ArrowLeft />} to="/plugins/strapi-headless-commerce">
+          <Link
+            startIcon={<ArrowLeft />}
+            to="/plugins/strapi-headless-commerce"
+          >
             Go back
           </Link>
         }

@@ -3,6 +3,7 @@
  * GiftCards
  *
  */
+import React from 'react'
 
 import {
   BaseHeaderLayout,
@@ -13,14 +14,16 @@ import {
   Link,
 } from '@strapi/design-system'
 import { ArrowLeft, Plus } from '@strapi/icons'
-import React from 'react'
 
 const GiftCards = () => {
   return (
     <>
       <BaseHeaderLayout
         navigationAction={
-          <Link startIcon={<ArrowLeft />} to="/plugins/strapi-headless-commerce">
+          <Link
+            startIcon={<ArrowLeft />}
+            to="/plugins/strapi-headless-commerce"
+          >
             Go back
           </Link>
         }

@@ -3,6 +3,7 @@
  * Discounts
  *
  */
+import React, { useState } from 'react'
 
 import {
   BaseHeaderLayout,
@@ -15,7 +16,7 @@ import {
   Stack,
 } from '@strapi/design-system'
 import { ArrowLeft, Plus } from '@strapi/icons'
-import React, { useState } from 'react'
+
 import { Table } from '../../components/Table'
 
 const Discounts = () => {
@@ -27,7 +28,10 @@ const Discounts = () => {
     <>
       <BaseHeaderLayout
         navigationAction={
-          <Link startIcon={<ArrowLeft />} to="/plugins/strapi-headless-commerce">
+          <Link
+            startIcon={<ArrowLeft />}
+            to="/plugins/strapi-headless-commerce"
+          >
             Go back
           </Link>
         }
